@@ -1,0 +1,54 @@
+.grid-container {
+    display: grid;
+    place-content: center;
+    /* background: linear-gradient(to bottom right, #6574cd, #a78bfa); */
+    padding: 4rem 1rem;
+    color: #1a202c;
+  }
+  
+  .tilt-card {
+    position: relative;
+    height: 30rem;
+    width: 24rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(to bottom right, #6574cd, #a78bfa);
+  }
+  
+  .card-content {
+    position: absolute;
+    inset: 1rem;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    border-radius: 1.5rem;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-size: cover; /* Ajusta según tu preferencia */
+    background-position: center; /* Ajusta según tu preferencia */
+    background-repeat: no-repeat; 
+    transform-style: preserve-3d;
+  }
+  
+  .mouse-pointer-icon {
+    margin: auto;
+    font-size: 2rem;
+    transform: translateZ(75px);
+  }
+  
+  .card-text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transform: translateZ(50px);
+  }
+  
+
+  @media screen and (max-width:600px) {
+    .tilt-card {
+      position: relative;
+      height: 22rem;
+      width: 16rem;
+      border-radius: 1.5rem;
+      background: linear-gradient(to bottom right, #6574cd, #a78bfa);
+    }
+  }
