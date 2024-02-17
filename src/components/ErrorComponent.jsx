@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import '@styles/error.css'
 const ErrorComponent = () => {
   return (
-    <main style={{maxWidth: "1300px", alignItems: "center", justifyContent: "center", display: "flex", flexDirection: "column", maxHeight: "1000px"}}>
+    <main style={{maxWidth: "1300px", alignItems: "center", justifyContent: "center", display: "flex", flexDirection: "column"}}>
       <NavLink className="volver" to="/">
        <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
         <path

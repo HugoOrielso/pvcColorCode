@@ -1,0 +1,14 @@
+.info-learn{
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    place-content: center;
+    text-align: start;
+    place-items: center;
+    margin: 1em;
+}
+
+@media screen and (max-width:700px) {
+    .info-learn{
+        grid-template-columns: 1fr;
+    }
+}

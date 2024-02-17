@@ -15,7 +15,8 @@ const NavLinks = () => {
                 {name: "Arquitectónica", link: "arquitectonica"}
             ]
         }]},
-        {name: "Aprende con pvc", link: "aprende"}
+        {name: "Aprende con pvc", link: "aprende"},
+        {name: "Distribuidores", link: "distribuidores"}
     ]
   return (
     <>

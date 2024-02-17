@@ -48,7 +48,7 @@ const Dudas = () => {
           <section className='grid-contact'>
             <Fade left cascade>
             <div>
-              <img src={contacto} alt="" />
+              <img src={contacto} alt="img-contacto" />
             </div>
             </Fade>
           <Fade bottom cascade>
@@ -78,7 +78,6 @@ const Dudas = () => {
             </section>
             </Fade>
             </section>
-          
           </section>
         <section className='contacto'>
           <Fade top>

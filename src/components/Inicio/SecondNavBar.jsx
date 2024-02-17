@@ -9,6 +9,7 @@ import { ButtonAnimated } from './Button'
 const SecondNavBar = () => {
     const [activeMenu,setActiveMenu] = useState(false)
   return (
+    <>
     <header className='menu-nav'>
         <div className='btn-img'>
             <NavLink className='contenedor-icon-nav' to="/">
@@ -25,6 +26,8 @@ const SecondNavBar = () => {
             </ul>
         </nav>
     </header>
+    <hr />
+    </>
   )
 }
 
