@@ -15,6 +15,10 @@ a {
   text-decoration: none;
 }
 
+.blue-text{
+  color: #0A2068;
+}
+
 
 body {
   margin: 0 auto;
@@ -46,14 +50,33 @@ p{
   margin: 0;
 }
 
+.main-wrapper-init{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 1300px;
+  width: 100%;
+  background-color: #0A2068;
+}
 
 .main-wrapper{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  max-width: 1300px;
+  width: 100%;
 }
+
+.main-wrapper section{
+  width: 100%;
+}
+
+.main-wrapper-init section{
+  width: 100%;
+}
+
 .animation-scroll{
   transform: translateY(50px);
   filter: blur(20px);

@@ -65,12 +65,6 @@ const handleMouseLeave = () => {
         }}
         className="card-content"
       >
-        {/* <FiMousePointer
-          style={{
-            transform: "translateZ(75px)",
-          }}
-          className="mouse-pointer-icon"
-        /> */}
         <p
           style={{
             transform: "translateZ(50px)",

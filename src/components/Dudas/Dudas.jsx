@@ -1,23 +1,24 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import Footer from '../Inicio/Footer'
 import MapChart from '../maps/Mapchart'
 import '@styles/dudas.css'
-import contacto from '@imagenes/contacto.jpg'
+import hombreDudas from '@imagenes/otros/hombreDudas.webp'
 import { EmailContacto, Location, PhoneContacto } from '../Icons/Iconst'
-import LottienAnimation from '../Nosotros/Lottie'
-import questions from "/public/questions.json";
 import {Fade, Zoom} from 'react-reveal'
 import SecondNavBar from '../Inicio/SecondNavBar'
-import {useForm} from 'react-hook-form'
 import emailjs from '@emailjs/browser';
+import bannerDudas from '@imagenes/otros/dudas.webp'
 import { Toaster, toast } from 'sonner'
+let publicKey = import.meta.env.VITE_PUBLICK_KEY
+let template = import.meta.env.VITE_TEMPLATE
+let name = import.meta.env.VITE_EMAIL_NAME
 const Dudas = () => {
   const ref = useRef()
   const SendEmail = (e) => {
     e.preventDefault()
       emailjs
-        .sendForm('buzonPvcColors', 'template_1szjdaj', ref.current, {
-          publicKey: 'IBgkeRqxIheUBkriC',
+        .sendForm(name, template, ref.current, {
+          publicKey: publicKey, 
         })
         .then(
           (resul) => {
@@ -31,14 +32,16 @@ const Dudas = () => {
   return (
     <>
       <SecondNavBar/>
-      <main>
+      <main className='main-wrapper-init'>
         <Zoom top cascade>
-        <section className='banner-dudas'>
+        <section className='banner-dudas' style={{minHeight: "550px"}}>
           <div className='second-animation'>
-              <div className="title"> <h1 className='span-title'>¿Dudas?</h1> </div>
-              <h2>Contáctanos para resolverlas.</h2>
+            <div className="title"> <h1 className='span-title'>¿Dudas?</h1> </div>
+            <h2>Contáctanos para resolverlas.</h2>
           </div>
-          <LottienAnimation alto={"500px"} ancho={"100%"} animacion={questions}/>
+          <div className='img-seccion-dudas'>
+            <img src={bannerDudas} alt="banner dudas" />
+          </div>
         </section>
         </Zoom>
         <section className='data-businnes'>
@@ -48,7 +51,7 @@ const Dudas = () => {
           <section className='grid-contact'>
             <Fade left cascade>
             <div>
-              <img src={contacto} alt="img-contacto" />
+              <img src={hombreDudas} alt="img-contacto" style={{padding: "1em"}}/>
             </div>
             </Fade>
           <Fade bottom cascade>
@@ -56,7 +59,8 @@ const Dudas = () => {
               <div>
                 <article>
                   <h2>Contacto</h2>
-                  <p>+57 310 458 2647 </p>
+                  <p>+57 311 872 7016 </p>
+                  <p>+57 316 628 8243 </p>
                 </article>
                 <PhoneContacto/>
               </div>

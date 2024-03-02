@@ -1,8 +1,22 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Descripción del Proyecto
 
-Currently, two official plugins are available:
+This website was developed to bussinnes PVC Color's, it's main goal is show all information about the bussinnes such as products and general information (Facebook, Instagram, WhatsApp)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+Content:
+-- Structure of project
+/src: has the main code of the app.
+/public: Static files and public resources.
+
+
+Requirements:
+
+-- The user require that the app show all its information, with a good design.
+
+Production:
+--pnpm run start, npm run start, pnpm run build, npm run build
+
+Contact:
+-- https://pinturaspvccolors.com/

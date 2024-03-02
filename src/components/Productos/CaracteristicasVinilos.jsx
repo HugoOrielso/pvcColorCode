@@ -1,7 +1,7 @@
 import React from 'react'
 import '@styles/productos.css'
 import { Water, Paint, Rain, Esplash, Chart, CalendarCheck } from '../Icons/Iconst'
-import Aire from '@imagenes/aire.png'
+import Aire from '@imagenes/aire.webp'
 const CaracteristicasVinilos = () => {
   return (
     <section className='features'>
@@ -10,7 +10,6 @@ const CaracteristicasVinilos = () => {
           <div>
             <span>
               <Paint/>
-
             </span>
             <p>Excelente retención de color.</p>
           </div>
@@ -21,30 +20,30 @@ const CaracteristicasVinilos = () => {
             <p>Alto rendimiento.</p>
           </div>
           <div>
-            <img src={Aire} alt="" />
+            <img src={Aire} alt="imagen icon" />
             <p>Bajo contenido de VOC.</p>
           </div>
           <div>
             <span>
-            <Esplash/>
+              <Esplash/>
             </span>
             <p>Bajo salpique.</p>
           </div>
           <div>
             <span>
-            <Water/>
+              <Water/>
             </span>
             <p>Diluible con agua.</p>
           </div>
           <div>
             <span>
-            <Rain/>
+              <Rain/>
             </span>
             <p>Uso en ambientes interior y exteriores.</p>
           </div>
           <div>
             <span>
-            <Chart/>
+              <Chart/>
             </span>
             <p>Alto cubrimiento.</p>
           </div>

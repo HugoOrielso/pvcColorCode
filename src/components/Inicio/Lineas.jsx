@@ -1,58 +1,87 @@
 import React, {  useRef } from 'react'
 import '@styles/lineas.css'
-import img1 from '@imagenes/lineaIndustrial.jpg'
-import img2 from '@imagenes/secciones/maderas/madera.jpg'
-import img3 from '@imagenes/arquitectonicaBanner.jpg'
+import img1 from '@imagenes/industria.webp'
+import img2 from '@imagenes/madera.webp'
+import img3 from '@imagenes/arquitectura.webp'
+import img4 from '@imagenes/pinturaSpray.webp'
 import { NavLink } from 'react-router-dom'
 import { Plus } from '../Icons/Iconst'
-import CustomHook from '../../redux/CustomHook'
+import { Fade, Zoom} from 'react-reveal'
 
 const Lineas = () => {
-  const divs = useRef([])
-  CustomHook(divs)
   return (
     <>
-      <section className='variedad' ref={(el)=>{el && divs.current.push(el)}} >
-        <h1>Descubre la <span className='resalto'>variedad </span>  que tenemos para tí</h1>
+      <Zoom cascade>
+      <section className='variedad' >
+        <h1 style={{color: "white"}}>PRODUCTOS</h1>
       </section>
+      </Zoom>
       <section className='lineas' >
-        <div className='box box1' ref={(el)=>{el && divs.current.push(el)}}>
-          <img src={img1} alt="" className='img-linea'/>
+        <Zoom cascade bottom>
+        <div className='box box1' >
+          <Fade top>
+            <img src={img1} alt="imagen línea industrial" className='img-linea' />
+          </Fade>
           <NavLink className='linea' to="/lineas/industrial">
             <header>
-              <h2>Línea industrial</h2>
+              <h2>Línea Industrial</h2>
             </header>
             <main>
-              <p>Embellecimiento, protección, mantenimiento de máquinas y útiles industriales.</p>
+              <p>Decoración, protección y mantenimiento de máquinas e industria en general.</p>
             </main>
             <footer className='footer-section'>Ver más <Plus/></footer>
           </NavLink>
         </div>
-        <div className='box box2' ref={(el)=>{el && divs.current.push(el)}}>
-          <img src={img2} alt="" className='img-linea'/>
+        </Zoom>
+        <Zoom cascade bottom>
+        <div className='box box2' >
+          <Fade top>
+            <img src={img2} alt="imagen línea de maderas" className='img-linea'/>
+          </Fade>
           <NavLink className='linea' to="/lineas/maderas">
             <header>
-              <h2>Línea maderas</h2>
+              <h2>Línea Maderas</h2>
             </header>
             <main>
-              <p>Protege, mejora, y embellece superficies de madera.</p>
+              <p>Embellece muebles y superficies de madera.</p>
             </main>
             <footer className='footer-section'>Ver más <Plus/></footer>
           </NavLink>
-
         </div>
-        <div className='box box3' ref={(el)=>{el && divs.current.push(el)}}>
-          <img src={img3} alt="" className='img-linea'/>
+        </Zoom>
+        <Zoom cascade bottom>
+        <div className='box box3'>
+          <Fade top>
+            <img src={img3} alt="imagen línea arquitectónica" className='img-linea'/>
+          </Fade>
           <NavLink className='linea' to="/lineas/arquitectonica">
             <header>
-              <h2>Línea arquitectónica</h2>
+              <h2>Línea Arquitectónica</h2>
             </header>
             <main>
-              <p>Todo lo relacionado con decoración de interiores y tu hogar</p>
+              <p>Decora tu hogar oficina y edificios.</p>
             </main>
             <footer className='footer-section'>Ver más <Plus/> </footer>
           </NavLink>
         </div>
+        </Zoom>
+        <Zoom cascade bottom>
+
+        <div className='box box3'>
+          <Fade top>
+            <img src={img4} alt="imagen otras líneas" className='img-linea'/>
+          </Fade>
+          <NavLink className='linea' to="/lineas/otros">
+            <header>
+              <h2>Otras Líneas</h2>
+            </header>
+            <main>
+              <p>Decora tu hogar oficina y edificios.</p>
+            </main>
+            <footer className='footer-section'>Ver más <Plus/> </footer>
+          </NavLink>
+        </div>  
+        </Zoom>
       </section>
     </>
   )

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '@styles/navBarDos.css'
-import logoIcon from '@imagenes/logo.png'
+import logoIcon from '@imagenes/logo.webp'
 import { NavLink } from 'react-router-dom'
 import NavLinks from './NavLinks'
 import { ButtonAnimated } from './Button'
@@ -13,7 +13,7 @@ const SecondNavBar = () => {
     <header className='menu-nav'>
         <div className='btn-img'>
             <NavLink className='contenedor-icon-nav' to="/">
-                <img src={logoIcon} alt="logoPVC" />
+                <img src={logoIcon} alt="logo pvc color's" />
             </NavLink>
             <ButtonAnimated setMenu={setActiveMenu} menuValue={activeMenu} className='btn-menu-list'/>
         </div>
@@ -26,7 +26,6 @@ const SecondNavBar = () => {
             </ul>
         </nav>
     </header>
-    <hr />
     </>
   )
 }

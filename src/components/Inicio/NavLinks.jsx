@@ -12,11 +12,13 @@ const NavLinks = () => {
                 {name: "Todas", link: "lineas"},
                 {name: "Maderas", link: "maderas"},
                 {name: "Industrial", link: "industrial"},
-                {name: "Arquitectónica", link: "arquitectonica"}
+                {name: "Arquitectónica", link: "arquitectonica"},
+                {name: "Otros ", link: "otros"}
             ]
         }]},
         {name: "Aprende con pvc", link: "aprende"},
-        {name: "Distribuidores", link: "distribuidores"}
+        {name: "Distribuidores", link: "distribuidores"},
+        {name: "Calculadora", link: "calculadora"}
     ]
   return (
     <>

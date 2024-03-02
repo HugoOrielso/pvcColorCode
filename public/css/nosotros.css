@@ -38,9 +38,7 @@
 }
 
 .mision h2{
-    color: white;
     font-size: 2em;
-
 }
 
 .vision h2{
@@ -66,9 +64,12 @@
     place-items: center;
     margin: 1em;
 }
+
+.grid-m-v.mobile{
+    display: none;
+}
 .grid-m-v h2{
     font-size: 2em;
-    color: rebeccapurple;
     font-weight: bold;
 }
 
@@ -85,7 +86,6 @@
   }
 
   .infor-presentacion h2{
-    color: rebeccapurple;
     font-weight: bold;
     font-size: 2em;
   }
@@ -118,6 +118,15 @@
     }
     .grid-m-v p{
         font-size: 1em;
+    }
+    .grid-m-v.mobile{
+        display: grid;
+        grid-template-columns: 1fr;
+        place-content: center;
+        place-items: center;
+    }
+    .grid-m-v.mision{
+        display: none;
     }
   }
 

@@ -2,17 +2,22 @@ import React from 'react'
 import SecondNavBar from '../Inicio/SecondNavBar'
 import VerticalAccordion from './Acordeon'
 import '@styles/aprende.css'
-import LearnAnimation from '/public/learnTres.json'
-import LottienAnimation from '../Nosotros/Lottie'
 import Footer from '../Inicio/Footer'
+import {Reveal, Zoom} from 'react-reveal'
+import paletaColores from '@imagenes/otros/paletaDeColores.webp'
+
 const Aprende = () => {
   return (
     <>
         <SecondNavBar/>
-        <main style={{maxWidth: "1300px", minHeight: "600px"}}>
+        <main className='main-wrapper'>
           <section className='info-learn'>
+            <Reveal bottom>
             <VerticalAccordion/>
-            <LottienAnimation alto={"100%"} ancho={"100%"} animacion={LearnAnimation}/>
+            </Reveal>
+            <Zoom  >
+              <img src={paletaColores} alt="paleta" style={{width: "100%", paddingRight: ".5em"}} />
+            </Zoom>
           </section>
         </main>
         <Footer/>

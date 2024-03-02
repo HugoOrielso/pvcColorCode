@@ -1,54 +1,62 @@
 import React from 'react'
-import BannerArquitectionica from '@imagenes/secciones/arquitectonica/arquitectonicaBannerDos.jpg'
-import BannerMaderas from '@imagenes/secciones/maderas/madera.jpg'
 import { Zoom } from 'react-reveal'
 import '@styles/secciones.css'
-
-import maderaAnimation from '/public/madera.json'
-import arquitecturaAnimation from '/public/arquitectura.json'
-import industriaAnimation from '/public/industria.json'
-
+import bannerMaderas from '@imagenes/secciones/maderas/bannerMaderas.webp'
+import bannerIndustrial from '@imagenes/secciones/industrial/bannerIndustrial.webp'
+import bannerArquitectonica from '@imagenes/secciones/arquitectonica/bannerArquitectonica.webp'
+import bannerOtros from '@imagenes/secciones/otros/bannerOtrasLineas.webp'
 import '@styles/secciones.css'
-import LottienAnimation from '../Nosotros/Lottie'
 const RenderizarBannerDos = ({categoria}) => {
     return(
         <Zoom>
-        <section className='banner-dos'>
-            {
-                categoria == "arquitectonica" && 
-                <section className='lineas-banner'>
-                <LottienAnimation alto={"450px"} ancho={"100%"} animacion={arquitecturaAnimation}/>
-                <div>
-                    <h1 className='span-title-arquitectura'>Línea </h1>
-                    <h1 className='span-title-arquitectura'>arquitectónica</h1>
-                    <h1 className='span-title-arquitectura mobile'>Línea arquitectónica</h1>
-                </div>
+            <section className='container-banner-imgs'>
+                {
+                    categoria == "arquitectonica" && 
+                    <section className='lineas-banner arq'>
+                        <img src={bannerArquitectonica} alt="banner linea arquitectónica" />
+                        <div>
+                            <h1 className='title-banner-lineas arq'>Línea </h1>
+                            <h1 className='title-banner-lineas arq'>arquitectónica</h1>
+                            <h1 className='title-banner-lineas mobile'>Línea arquitectónica</h1>
+                        </div>
+                    </section>
+                }                            
+                {
+                    categoria == "maderas" && 
+                    <section className='lineas-banner'>
+                        <img src={bannerMaderas} alt="banner linea maderas" />
+                        <div>
+                            <h1 className='title-banner-lineas mad'>Línea</h1>
+                            <h1 className='title-banner-lineas mad'>maderas</h1>
+                            <h1 className='title-banner-lineas mobile'> Línea maderas</h1>
+                        </div>
+                    </section>
+                }                              
+                {
+                    categoria == "industrial" && 
+                    <section className='lineas-banner'>
+                        {/* <LottienAnimation alto={"450px"} ancho={"100%"} animacion={industriaAnimation}/> */}
+                        <img src={bannerIndustrial} alt="banner linea industrial" />
+                        <div>
+                            <h1 className='title-banner-lineas ind'>Línea</h1>
+                            <h1 className='title-banner-lineas ind'>industrial</h1>
+                            <h1 className='title-banner-lineas mobile'>Línea industrial</h1>
+                        </div>
+                    </section>
+                }    
+                {
+                    categoria == "otros" &&
+                    <section className='lineas-banner'>
+                        {/* <LottienAnimation alto={"450px"} ancho={"100%"} animacion={industriaAnimation}/> */}
+                        <img src={bannerOtros} alt="banner otras líneas" />
+                        <div>
+                            <h1 className='title-banner-lineas otr'>Otras</h1>
+                            <h1 className='title-banner-lineas otr  '>Líneas</h1>
+                            <h1 className='title-banner-lineas mobile'>Otras líneas</h1>
+                        </div>
+                    </section>
+                }                      
             </section>
-            }
-            {
-                categoria == "industrial" && 
-                <section className='lineas-banner'>
-                <LottienAnimation alto={"450px"} ancho={"100%"} animacion={industriaAnimation}/>
-                    <div>
-                        <h1 className='span-title-industrial'>Línea</h1>
-                        <h1 className='span-title-industrial'>industrial</h1>
-                        <h1 className='span-title-industrial mobile'>Línea industrial</h1>
-                    </div>
-                </section>
-            }
-            {
-                categoria == "maderas" && 
-                <section className='lineas-banner'>
-                    <LottienAnimation alto={"450px"} ancho={"100%"} animacion={maderaAnimation}/>
-                    <div>
-                        <h1 className='span-title-madera'>Línea</h1>
-                        <h1 className='span-title-madera'>maderas</h1>
-                        <h1 className='span-title-madera mobile'> Línea maderas</h1>
-                    </div>
-                </section>
-            }
-        </section>
-        
         </Zoom>
     )
 }

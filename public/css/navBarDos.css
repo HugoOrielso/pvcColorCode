@@ -1,8 +1,10 @@
 .menu-nav{
-    background: #fdfdff;
+    background: #0A2068;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: .5em;
+    min-height: 8em;
+    align-items: center;
 }
 .navbar{
     display: flex;
@@ -20,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 3.5em;
+    height: 5.5em;
 }
 .li-navbar-mobile{
     overflow: hidden;
@@ -36,7 +38,6 @@
 .contenedor-icon-nav img{
     width: 100%;
     height: 100%;
-    max-width: 4.5em;
 }
 .a-navbar.active{
     background: royalblue;
@@ -103,8 +104,7 @@
     font-weight: bold;
     width: 100%;
     height: 100%;
-    color: black;
-    text-transform: uppercase; 
+    color: white;
     display: inline-block;
     transition: all .5s ease;
 }
@@ -212,7 +212,6 @@
     .absolute-submenu-mobile{
         opacity: 0;
         padding-left: 1em;
-        background-color: white;
         transition: all .5s ease;
     }
     .absolute-submenu-mobile.active{
@@ -226,8 +225,9 @@
         display: block;
         background-color: #f0eeff;
         opacity: 1;
+        place-items: center;
         border-radius: 12px;
-        height: 150px;
+        height: 180px;
         font-size: 1.5em;
     }
     .bg-absolute-mobile li{

@@ -1,6 +1,4 @@
 import Lottie from 'react-lottie'
-
-
 const LottienAnimation = ({alto,ancho,animacion}) => {
     const defaultOptions={
         loop: true,

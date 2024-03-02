@@ -2,7 +2,6 @@ import React from 'react'
 import json from '/public/Info.json'
 import '@styles/secciones.css'
 import '@styles/buttonFicha.css'
-import { Ficha } from '../Icons/Iconst'
 import CardProduct from './Card'
 import { Typewriter } from 'react-simple-typewriter'
 import { Shapes } from '../shapes/Shapes'
@@ -13,7 +12,7 @@ const RenderizarProductoDetail = ({name, categoria}) => {
     const secciones = Object.values(json)
     const secccion = secciones.find(linea=> linea.categoria == categoria)
     const producto = secccion.productos.find(producto=>producto.url == name)
-    const {imagenProducto, descripcionProducto , recomendaciones, nombreProducto, colores, presentacion, ficha} = producto
+    const {imagenProducto, descripcionProducto , recomendaciones, nombreProducto, colores, presentacion, ficha, coloresDos} = producto
     return (
         <section className='presentacion-general-details'>
             <section className='producto-detail'>
@@ -52,18 +51,48 @@ const RenderizarProductoDetail = ({name, categoria}) => {
                 <Fade bottom cascade>
                 <div className='container-colores'>
                 <h1>Colores</h1>
-                    <ul>
-                    {colores ? colores.map((color,i)=>{
-                        return(
-                            <li key={i}>
-                                {
-                                    color == "white" ? <div  style={{backgroundColor:`${color}`, border: "solid .1px black"}} className='color'/> : 
-                                    <div key={i} style={{backgroundColor:`${color}`}} className='color'/>
+                    {
+                        coloresDos ? 
+                        <div className='div-colores'>
+                            {coloresDos.map((color,i)=>{
+                                return(
+                                    <div key={i} >
+                                        <div style={{textAlign: "center"}}>
+                                        <h3>{color.name}</h3>
+                                        </div>
+                                        <div className='colores-grid'>
+                                            {color.colores.map((color,i)=>{
+                                                if(color == "white"){
+                                                    return(
+                                                        <div className='color' style={{border: ".1px solid black", background: color}}/>
+                                                    )
+                                                }
+                                                return(
+                                                    <div className='color' style={{background: color }}/>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    : null}
+                    {colores ? 
+                        <div className='colores-grid'>
+                            {colores.map((color,i)=>{
+                                if(color == "white"){
+                                    return(
+                                        <div className='color' key={i} style={{border: ".1px solid black", background: color}}/>
+                                    )
                                 }
-                            </li>
-                        )
-                    }) : <p>Sin colores</p>}
-                    </ul>
+                                return(
+                                    <div key={i} className='color' style={{background: color }}/>
+                                )
+                            })}
+                        </div> 
+                    : null }
+
+                    {!colores && !coloresDos ? <p>Sin colores</p> : null}
                 </div>
                 </Fade>
             </section>
