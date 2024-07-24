@@ -31,9 +31,9 @@ const Mapas = () => {
   return (
     <>
     <SecondNavBar/>
-    <main className='main-wrapper' style={{minHeight: "90vh"}}>
+    <main className='main-wrapper' >
 
-      <section className='grid-mapisng'>
+      <section className='grid-maping'>
         <section className='mapas' style={{maxWidth: "1450px"}}>
           <Zoom>
           <div className='list'>

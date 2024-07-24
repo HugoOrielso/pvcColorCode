@@ -1,4 +1,3 @@
-import React from 'react'
 import SecondNavBar from '../Inicio/SecondNavBar'
 import Footer from '../Inicio/Footer'
 import info from '/public/calculadora.json'
@@ -8,7 +7,7 @@ const Calculadora = () => {
   return (
     <>
         <SecondNavBar/>
-        <main className='main-wrapper' style={{minHeight: "500px"}}>
+        <main className='main-wrapper' style={{minHeight: "800px"}}>
           <SelectProduct productos={info}/>
         </main>
         <Footer/>
