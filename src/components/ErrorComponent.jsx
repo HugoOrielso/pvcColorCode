@@ -2,25 +2,24 @@ import LottienAnimation from './Nosotros/Lottie'
 import ErrorAnimation from "/public/errorAnimation.json";
 import { NavLink } from 'react-router-dom';
 import '@styles/error.css'
+import NavBar from './Inicio/NavBar';
 const ErrorComponent = () => {
   return (
-    <main style={{margin:"0 auto", alignItems: "center", justifyContent: "center", display: "flex", flexDirection: "column"}}>
+    <>
+    <NavBar/>
+    <main className='error-wrapper' >
+      <div className='limitador_lotie' >
+        <LottienAnimation alto={"800px"} ancho={"100%"} animacion={ErrorAnimation}/>
+      </div>
       <NavLink className="volver" to="/">
-       <svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-        ></path>
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" className="bi bi-arrow-left-short" viewBox="0 0 16 16">
+        <path fillRule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
         </svg>
-        <span className="text">Volver</span>
-        <span className="circle"></span>
-        <svg viewBox="0 0 24 24" className="arr-1" xmlns="http://www.w3.org/2000/svg">
-        <path
-        d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-        ></path>
-        </svg>
+        Volver
       </NavLink>
-      <LottienAnimation alto={"100%"} ancho={"100%"} animacion={ErrorAnimation}/>
+
     </main>
+    </>
   )
 }
 

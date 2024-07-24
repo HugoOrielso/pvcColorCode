@@ -3,7 +3,7 @@ import RenderizarBannerDos from './RenderizarBannerDos'
 import RenderizarProductoDetail from './RenderizarProductoDetail'
 import Footer from '../Inicio/Footer'
 import CaracteristicasVinilos from './CaracteristicasVinilos'
-import SecondNavBar from '../Inicio/SecondNavBar'
+import NavBar from '../Inicio/NavBar'
 import '@styles/volverBtn.css'
 import CromatoDeZinc from '../Caracteristicas/CromatoDeZinc'
 import ColbonMaderaSeca from '../Caracteristicas/ColbonMaderaSeca'
@@ -31,7 +31,7 @@ const ProductoDetail = () => {
     };
   return (
     <>
-      <SecondNavBar/>
+      <NavBar/>
       <main className='main-wrapper'>
         <RenderizarBannerDos categoria={categoria}/>
         <div>

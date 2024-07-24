@@ -1,6 +1,6 @@
 import '@styles/productos.css'
 import Footer from '../Inicio/Footer'
-import SecondNavBar from '../Inicio/SecondNavBar'
+import NavBar from '../Inicio/NavBar'
 import LottienAnimation from '../Nosotros/Lottie'
 import LineasAnimation from '/public/lineas.json'
 import Lineas from '../Inicio/Lineas'
@@ -8,7 +8,7 @@ import Lineas from '../Inicio/Lineas'
 const Productos = () => {
   return (
     <>
-      <SecondNavBar/>
+      <NavBar/>
       <main className='main-wrapper-init'>
         <section className='banner'> 
           <h1>Todas las líneas</h1>

@@ -24,7 +24,6 @@ const Routing = () => {
         <Route path='/aprende' element={<Aprende/>}/>
         <Route path='/distribuidores' element={<Distribuidores/>}/>
         <Route path='/calculadora' element={<Calculadora/>}/>
-        <Route path='/lotie' element={<Calculadora/>}/>
         <Route path='*' element={<ErrorComponent/>}/>
       </Routes>
     </BrowserRouter>

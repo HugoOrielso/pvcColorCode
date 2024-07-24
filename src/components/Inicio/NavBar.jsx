@@ -6,12 +6,12 @@ import NavLinks from './NavLinks'
 import { ButtonAnimated } from './Button'
 
 
-const SecondNavBar = () => {
+const NavBar = () => {
     const [activeMenu,setActiveMenu] = useState(false)
   return (
     <>
     <header className='menu-nav'>
-        <div style={{maxWidth:"1450px", display: "flex", justifyContent: "space-between", width: "100%"}}>
+        <div className='container-menu'>
             <div className='btn-img'>
                 <NavLink className='contenedor-icon-nav' to="/">
                     <img src={logoIcon} alt="logo pvc color's" />
@@ -26,11 +26,10 @@ const SecondNavBar = () => {
                     <NavLinks/>
                 </ul>
             </nav>
-
         </div>
     </header>
     </>
   )
 }
 
-export default SecondNavBar
+export default NavBar

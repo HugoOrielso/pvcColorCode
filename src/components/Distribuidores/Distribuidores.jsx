@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Footer from '../Inicio/Footer';
-import SecondNavBar from '../Inicio/SecondNavBar';
+import NavBar from '../Inicio/NavBar';
 import '@styles/distribuidores.css'
 import {Reveal,Zoom} from 'react-reveal'
 import hombreConCasco from '@imagenes/otros/hombreCasco.webp'
@@ -30,7 +30,7 @@ const Mapas = () => {
 
   return (
     <>
-    <SecondNavBar/>
+    <NavBar/>
     <main className='main-wrapper' >
 
       <section className='grid-maping'>

@@ -1,4 +1,4 @@
-import SecondNavBar from '../Inicio/SecondNavBar'
+import NavBar from '../Inicio/NavBar'
 import VerticalAccordion from './Acordeon'
 import '@styles/aprende.css'
 import Footer from '../Inicio/Footer'
@@ -8,7 +8,7 @@ import paletaColores from '@imagenes/otros/paletaDeColores.webp'
 const Aprende = () => {
   return (
     <>
-        <SecondNavBar/>
+        <NavBar/>
         <main className='main-wrapper'>
           <section className='info-learn'>
             <Reveal bottom>

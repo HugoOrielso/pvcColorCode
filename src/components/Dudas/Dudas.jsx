@@ -6,7 +6,7 @@ import '@styles/dudas.css'
 import hombreDudas from '@imagenes/otros/hombreDudas.webp'
 import { EmailContacto, Location, PhoneContacto } from '../Icons/Iconst'
 import {Fade, Zoom} from 'react-reveal'
-import SecondNavBar from '../Inicio/SecondNavBar'
+import NavBar from '../Inicio/NavBar'
 import emailjs from '@emailjs/browser';
 import bannerDudas from '@imagenes/otros/dudas.webp'
 import { Toaster, toast } from 'sonner'
@@ -32,7 +32,7 @@ const Dudas = () => {
     }
   return (
     <>
-      <SecondNavBar/>
+      <NavBar/>
       <main className='main-wrapper-init'>
         <Zoom top cascade>
         <section className='banner-dudas'>

@@ -4,11 +4,11 @@ import TeamImage from '@imagenes/otros/teamBusinnes.webp'
 import Mision from '@imagenes/otros/target.webp'
 import Vision from '@imagenes/otros/vision.webp'
 import { Fade, Zoom, Roll } from 'react-reveal'
-import SecondNavBar from '../Inicio/SecondNavBar.jsx'
+import NavBar from '../Inicio/NavBar.jsx'
 const Nosotros = () => {
   return (
     <>
-      <SecondNavBar/>
+      <NavBar/>
       <main className='main-wrapper' >
         <section className='title-nosotros'>
           <h1 className="blue-text">¿Quiénes Somos?</h1>
