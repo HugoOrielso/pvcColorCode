@@ -1,4 +1,4 @@
-import React from 'react'
+/* eslint-disable react/no-unescaped-entities */
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules'
 import '@styles/SliderTres.css'
@@ -14,6 +14,7 @@ const Slider = () => {
             content: "Nuestro equipo de expertos en colores y diseño está aquí para guiarte en cada paso del camino. Desde la selección de tonos hasta la aplicación, te brindamos asesoramiento personalizado para garantizar que tu visión se haga realidad.",
             className: "hombrePintando"
         },
+        
         {
             imagenProducto: "/images/slider/coloresRadiantes.webp",
             content: "Colores vibrantes vivos y emocionantes.",
@@ -24,14 +25,7 @@ const Slider = () => {
             imagenProducto: "/images/slider/paleta.webp",
             content: "Variedad de colores a elegir, asesoramiento personalizado para escoger el color que mas  adapta en nuestros proyectos de remodelación",
             className: "paletaSlider"
-        },
-        // {
-        //     imagenProducto: "/images/slider/urlWeb.webp",
-        //     content: "https://www.pvccolors.com/",
-        //     className: "urlWeb",
-        //     edit: "slider-edit"
-            
-        // }
+        }
     ]
   return (
     <>

@@ -1,6 +1,4 @@
-import React from 'react'
 import Footer from '../Inicio/Footer'
-import LottieAnimation from './Lottie.jsx'
 import '@styles/nosotros.css'
 import TeamImage from '@imagenes/otros/teamBusinnes.webp'
 import Mision from '@imagenes/otros/target.webp'
@@ -11,15 +9,15 @@ const Nosotros = () => {
   return (
     <>
       <SecondNavBar/>
-      <main className='main-wrapper'>
+      <main className='main-wrapper' >
         <section className='title-nosotros'>
           <h1 className="blue-text">¿Quiénes Somos?</h1>
         </section>
-        <section className='presentacion-nosotros'>
+        <section className='presentacion-nosotros' style={{marginTop: "1em"}}>
           <div className='infor-presentacion' >
             <Fade>
             <div>
-              <img src={TeamImage} alt="team" style={{width: "95%", paddingLeft: "1em"}} />
+              <img src={TeamImage} alt="team" style={{width: "100%", aspectRatio: "3/2"}} />
             </div>
             </Fade>
             <div style={{paddingRight: "1em"}}>
@@ -45,12 +43,12 @@ const Nosotros = () => {
                 <p className='blue-text'>A través de la excelencia en la fabricación y el compromiso,  buscando ser reconocidos como un socio confiable y preferido por arquitectos, constructores y, profesionales de la pintura en todo el mundo.</p>
               </div>
               <div >
-                <img src={Mision} alt="mision" style={{width: "95%"}} />
+                <img src={Mision} alt="mision" style={{width: "95%", aspectRatio: "1.1"}} />
               </div>  
             </div>
             <div className="grid-m-v mobile">
               <div >
-                <img src={Mision} alt="mision" style={{width: "95%"}} />
+                <img src={Mision} alt="mision" style={{width: "95%", aspectRatio: "3/2"}} />
               </div> 
               <div >
                 <h2 className='blue-text'>Misión</h2>

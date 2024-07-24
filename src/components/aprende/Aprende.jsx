@@ -1,4 +1,3 @@
-import React from 'react'
 import SecondNavBar from '../Inicio/SecondNavBar'
 import VerticalAccordion from './Acordeon'
 import '@styles/aprende.css'
@@ -16,7 +15,7 @@ const Aprende = () => {
             <VerticalAccordion/>
             </Reveal>
             <Zoom  >
-              <img src={paletaColores} alt="paleta" style={{width: "100%", paddingRight: ".5em"}} />
+              <img src={paletaColores} alt="paleta" style={{width: "100%", paddingRight: ".5em", aspectRatio: 1.2}} />
             </Zoom>
           </section>
         </main>

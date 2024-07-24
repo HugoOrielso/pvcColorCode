@@ -1,4 +1,3 @@
-import React from 'react'
 import { useParams } from 'react-router-dom'
 import RenderizarBannerDos from './RenderizarBannerDos'
 import RenderizarProductoDetail from './RenderizarProductoDetail'

@@ -1,4 +1,4 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
 import { Zoom } from 'react-reveal'
 import '@styles/secciones.css'
 import bannerMaderas from '@imagenes/secciones/maderas/bannerMaderas.webp'

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Footer from '../Inicio/Footer';
 import SecondNavBar from '../Inicio/SecondNavBar';
 import '@styles/distribuidores.css'
@@ -34,7 +34,7 @@ const Mapas = () => {
     <main className='main-wrapper' style={{minHeight: "90vh"}}>
 
       <section className='grid-mapisng'>
-        <section className='mapas' style={{maxWidth: "1300px"}}>
+        <section className='mapas' style={{maxWidth: "1450px"}}>
           <Zoom>
           <div className='list'>
             <h2>Selección de Mapas</h2>
@@ -50,7 +50,7 @@ const Mapas = () => {
           </div>
           </Zoom>
           <Reveal>
-          <div style={{ maxWidth: "1300px" , width: "100%", maxHeight: "500px", textAlign: "center"}}>
+          <div style={{ maxWidth: "1450px" , width: "100%", maxHeight: "500px", textAlign: "center", display: "flex", alignItems: "center", justifyContent: "center"}}>
             {selectedMap ? (
               <div  style={{ maxWidth: "1250px" , width: "100%"}}>
                 <iframe src={selectedMap.link} width={"100%"} height={450} style={{ border: "0" }} allowFullScreen="" loading="async" referrerPolicy="no-referrer-when-downgrade"></iframe>

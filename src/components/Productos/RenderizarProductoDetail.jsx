@@ -1,4 +1,4 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
 import json from '/public/Info.json'
 import '@styles/secciones.css'
 import '@styles/buttonFicha.css'

@@ -1,4 +1,3 @@
-import React from 'react'
 import '@styles/productos.css'
 import Footer from '../Inicio/Footer'
 import SecondNavBar from '../Inicio/SecondNavBar'

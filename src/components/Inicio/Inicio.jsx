@@ -1,4 +1,4 @@
-import React from 'react'
+/* eslint-disable react/no-unknown-property */
 import Footer from './Footer'
 import Lineas from './Lineas'
 import SecondNavBar from './SecondNavBar'
@@ -8,11 +8,17 @@ const Inicio = () => {
   return (
     <>
       <SecondNavBar/>
-      <main className='main-wrapper-init'>
-        <Slider/>
-        <Lineas/>
-      </main>
-      <Footer/>    
+        <main className='main-wrapper-init'>
+          <section style={{maxWidth: "1300px", width: "100%"}}>
+            <Slider/>
+          </section>
+          <Lineas/>
+          <div style={{height: "500px", width: "100%"}}>
+
+          </div>
+        </main>
+        <Footer/>    
+
     </>
   )
 }

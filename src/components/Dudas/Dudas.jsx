@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useRef } from 'react'
 import Footer from '../Inicio/Footer'
 import MapChart from '../maps/Mapchart'
@@ -34,13 +35,13 @@ const Dudas = () => {
       <SecondNavBar/>
       <main className='main-wrapper-init'>
         <Zoom top cascade>
-        <section className='banner-dudas' style={{minHeight: "550px"}}>
+        <section className='banner-dudas'>
           <div className='second-animation'>
             <div className="title"> <h1 className='span-title'>¿Dudas?</h1> </div>
             <h2>Contáctanos para resolverlas.</h2>
           </div>
           <div className='img-seccion-dudas'>
-            <img src={bannerDudas} alt="banner dudas" />
+            <img src={bannerDudas} alt="banner dudas"  style={{aspectRatio: 1}}/>
           </div>
         </section>
         </Zoom>
@@ -51,7 +52,7 @@ const Dudas = () => {
           <section className='grid-contact'>
             <Fade left cascade>
             <div>
-              <img src={hombreDudas} alt="img-contacto" style={{padding: "1em"}}/>
+              <img src={hombreDudas} alt="img-contacto" style={{padding: "1em", aspectRatio: "3/2"}}/>
             </div>
             </Fade>
           <Fade bottom cascade>

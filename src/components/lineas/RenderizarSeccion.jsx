@@ -1,4 +1,4 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
 import '@styles/secciones.css'
 import json from '/public/Info.json'
 import { NavLink } from 'react-router-dom';
@@ -7,6 +7,7 @@ import bannerMaderas from '@imagenes/secciones/maderas/bannerMaderas.webp'
 import bannerIndustrial from '@imagenes/secciones/industrial/bannerIndustrial.webp'
 import bannerArquitectonica from '@imagenes/secciones/arquitectonica/bannerArquitectonica.webp'
 import bannerOtros from '@imagenes/secciones/otros/bannerOtrasLineas.webp'
+import { EmptyFolder } from '../Icons/Iconst';
 const RenderizarSeccion = ({ categoria }) => {
     const secciones = Object.values(json);
     if(secciones.length > 0){
@@ -14,8 +15,11 @@ const RenderizarSeccion = ({ categoria }) => {
         
         <section>
             {secciones.map((seccion, index) => (
+                
                 <div key={index} className='LineaCaegoria'>
+
                     {seccion.categoria == categoria && 
+                    
                         <>
                         <Zoom>
                             <section className='container-banner-imgs'>
@@ -84,13 +88,27 @@ const RenderizarSeccion = ({ categoria }) => {
                                         )
                                     })}
                                 </ul>
+                                    {seccion?.productos.length === 0 && 
+                                    <>
+                                        <p className='sin-productos'>No hay productos para mostrar
+                                            <EmptyFolder/>       
+                                        </p>             
+                                    </>
+                                    }    
                             </section>
                         </>
                     }
+
                 </div>
-            ))}
+                
+                
+            )
+            
+            )
+            }
+            
         </section>
-    );
+    )
     }
 }
 

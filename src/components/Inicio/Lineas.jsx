@@ -1,4 +1,3 @@
-import React, {  useRef } from 'react'
 import '@styles/lineas.css'
 import img1 from '@imagenes/industria.webp'
 import img2 from '@imagenes/madera.webp'
